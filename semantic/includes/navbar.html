@@ -1,13 +1,13 @@
 <div id="navbar" class="ui top fixed menu">
   <a href="{{ config.site_url }}" id="logo" class="item">
-    {%- if config.theme.logo.image %}
+    {%- if config.theme.logo and config.theme.logo.image %}
     <img
       src="{{ config.theme.logo.image | url }}"
       alt="404 -"
       class="ui middle aligned image"
       height="40px"
     />
-    {%- elif config.theme.logo.icon %}
+    {%- elif config.theme.logo and config.theme.logo.icon %}
     <i class="{{ config.theme.logo.icon }} icon"></i>
     {%- else %}
     <i class="python icon"></i>
